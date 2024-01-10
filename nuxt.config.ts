@@ -4,6 +4,6 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/supabase", "@nuxt/content", "@nuxt/ui"],
   ui: {
     global: true,
-    icons: ["fa6-brands", "fa6-solid", "fa6-regular"],
+    icons: [],
   },
 });
