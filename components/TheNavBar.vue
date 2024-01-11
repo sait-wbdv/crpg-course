@@ -1,9 +1,18 @@
 <template>
   <header class="flex justify-between mt-4 px-8">
     <div>
-      Logo<span v-if="user">| {{ user.email }}</span>
+      <NuxtLink to="/">
+        Logo<span v-if="user">| {{ user.email }}</span>
+      </NuxtLink>
     </div>
-    <nav><ul></ul></nav>
+    <nav>
+      <ul>
+        <li><NuxtLink to="lessons">Lessons</NuxtLink></li>
+        <li>
+          <NuxtLink v-if="user" to="employees">Employees</NuxtLink>
+        </li>
+      </ul>
+    </nav>
     <div>
       <LogoutButton v-if="user" />
       <div v-else>

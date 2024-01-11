@@ -1,4 +1,17 @@
 <script setup lang="ts">
+definePageMeta({
+  /*
+  middleware: [
+    function (to, from) {
+      const user = useSupabaseUser();
+      if (!user.value) {
+        return;
+      }
+      return navigateTo("/");
+    },
+  ],
+  */
+});
 const supabase = useSupabaseClient();
 const email = ref("");
 const password = ref("");
