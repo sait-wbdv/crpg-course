@@ -6,4 +6,7 @@ export default defineNuxtConfig({
     global: true,
     icons: [],
   },
+  supabase: {
+    redirect: false,
+  },
 });
