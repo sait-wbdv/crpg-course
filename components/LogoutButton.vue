@@ -1,12 +1,8 @@
 <template>
-  <div>
-    <button @click="logout">Sign out</button>
-    <p>{{ user }}</p>
-  </div>
+  <button @click="logout" class="bg-blue-500 p-4 rounded-md">Sign out</button>
 </template>
 
 <script setup>
-const user = useSupabaseUser();
 const supabase = useSupabaseClient();
 
 const logout = () => {

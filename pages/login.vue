@@ -28,7 +28,7 @@ const signInWithGoogle = async () => {
 
 <template>
   <main>
-    <div class="my-4">
+    <section class="my-4">
       <label for="email" class="block my-2">
         email
         <input type="email" v-model="email" />
@@ -41,14 +41,24 @@ const signInWithGoogle = async () => {
       <button @click="signIn" class="bg-blue-500 p-4">
         Sign In with E-Mail
       </button>
-    </div>
-    <div>
+    </section>
+    <section class="my-4">
+      <header class="my-2 mx-auto">
+        <h2 class="text-4xl">Sign in with our supported providers</h2>
+      </header>
       <button @click="signInWithGoogle" class="bg-amber-500 p-4">
         Sign in with Google
       </button>
-    </div>
-    <div>
-      <p>{{ user }}</p>
-    </div>
+    </section>
+    <section class="my-4">
+      <header class="my-2 mx-auto">
+        <h2 class="text-4xl">Authenticated user info</h2>
+      </header>
+      <ul>
+        <li v-for="userDetail in user">
+          {{ userDetail }}
+        </li>
+      </ul>
+    </section>
   </main>
 </template>
